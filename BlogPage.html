@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Avanya Legal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        .hamburger-line {
+            width: 24px;
+            height: 2px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        #menu-toggle.open .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 5px);
+        }
+
+        #menu-toggle.open .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        #menu-toggle.open .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(10px, -5px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-950 text-gray-100">
+    <!-- Overlay for mobile -->
+    <div id="overlay"
+        class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300"></div>
+
+    <!-- Navbar -->
+    <header class="backdrop-blur-md bg-gray-800/60 fixed w-full top-0 z-50 shadow-lg border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-4">
+                <img src="./Assets/logo.png" alt="Logo" class="h-12 w-auto object-contain rounded shadow-md" />
+                <div class="leading-tight">
+                    <span class="block text-xl md:text-2xl font-bold text-indigo-400">Avanya Legal</span>
+                    <span class="block text-sm md:text-base font-semibold text-indigo-300">Solutions & Research</span>
+                </div>
+            </a>
+
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 text-[18px] text-white">
+                <a href="index.html" class="hover:text-indigo-300 transition">Home</a>
+                <a href="Aboutus.html" class="hover:text-indigo-300 transition">About</a>
+                <a href="services.html" class="hover:text-indigo-300 transition">Services</a>
+                <a href="Gallery.html" class="hover:text-indigo-300 transition">Gallery</a>
+                <a href="Contact.html" class="hover:text-indigo-300 transition">Contact</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-toggle" class="md:hidden flex flex-col justify-between w-7 h-6 z-50 focus:outline-none">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-gray-900 border-t border-gray-700 z-50 md:hidden overflow-hidden">
+            <div class="flex flex-col px-6 py-4">
+                <a href="index.html" class="py-2 text-white hover:text-indigo-400">Home</a>
+                <a href="Aboutus.html" class="py-2 text-white hover:text-indigo-400">About</a>
+                <a href="services.html" class="py-2 text-white hover:text-indigo-400">Services</a>
+                <a href="Gallery.html" class="py-2 text-white hover:text-indigo-400">Gallery</a>
+                <a href="Contact.html" class="py-2 text-white hover:text-indigo-400">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Page Hero Section -->
+    <section
+        class="relative min-h-screen bg-gradient-to-r from-indigo-700 to-purple-800 text-white flex items-center justify-center text-center px-4 overflow-hidden">
+
+        <!-- Particles Container Inside Hero -->
+        <div id="particles-js-blog-hero" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></div>
+
+        <!-- Hero Content -->
+        <div class="max-w-4xl z-10" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+                Legal Insights & Video Articles
+            </h2>
+            <p class="text-lg md:text-xl mb-8 text-gray-200">
+                Watch expert legal content curated by Avanya Legal.
+            </p>
+            <div class="mt-10 animate-bounce" data-aos="fade-up" data-aos-delay="500">
+                <a href="#main-content"
+                    class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full backdrop-blur shadow-lg transition-all duration-300 hover:scale-105">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Grid -->
+    <section id="main-content" class="px-6 py-20 max-w-7xl mx-auto">
+        <div class="mb-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-white mb-2">Watch Our Legal Series</h2>
+            <p class="text-gray-400">Click on a video thumbnail to watch it on YouTube.</p>
+        </div>
+        <div class="relative">
+            <!-- Particles Background -->
+            <div id="particles-js" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></div>
+            <div class="relative z-10 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Video 1 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://www.youtube.com/watch?v=5enbYQUMT9o" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/5enbYQUMT9o/hqdefault.jpg"
+                            alt="Navigating Corporate Compliance in Nepal"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Navigating Corporate Compliance in Nepal</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Explore
+                                business
+                                regulations, compliance, and updates for Nepal in 2025.</p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=5enbYQUMT9o"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://www.youtube.com/watch?v=OpIjs8ud1Rc" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/OpIjs8ud1Rc/hqdefault.jpg" alt="What is Intellectual Property?"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                What is
+                                Intellectual Property?</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Discover
+                                the
+                                concept
+                                of intellectual property and why it matters in innovation and creativity.</p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=OpIjs8ud1Rc"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <a href="https://www.youtube.com/watch?v=Q3dk2-hfS9M" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/Q3dk2-hfS9M/hqdefault.jpg" alt="Types of Intellectual Property"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Types of
+                                Intellectual Property</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Learn
+                                about
+                                the
+                                different types of intellectual property including patents, trademarks, copyrights, and
+                                more.</p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=Q3dk2-hfS9M"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 4 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="400">
+                    <a href="https://www.youtube.com/watch?v=OcCv01ZNGrs" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/OcCv01ZNGrs/hqdefault.jpg"
+                            alt="Importance of Intellectual Property"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Importance of Intellectual Property</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Understand
+                                why
+                                protecting intellectual property is vital for creators, businesses, and the global
+                                economy.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=OcCv01ZNGrs"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 5 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="500">
+                    <a href="https://www.youtube.com/watch?v=umixNdOcz00" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/umixNdOcz00/hqdefault.jpg"
+                            alt="Why Should Startups Protect Their Intellectual Property?"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Why Should
+                                Startups Protect Their Intellectual Property?</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Explore
+                                how
+                                startups can
+                                benefit from IP protection and why securing their innovations early is essential for
+                                growth.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=umixNdOcz00"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 6 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="600">
+                    <a href="https://www.youtube.com/watch?v=3Zysp2fduiw" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/3Zysp2fduiw/hqdefault.jpg"
+                            alt="Protecting Intellectual Property in the Digital Age"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Protecting
+                                Intellectual Property in the Digital Age</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Explore
+                                strategies and
+                                challenges for safeguarding intellectual property rights in today’s fast-evolving
+                                digital
+                                landscape.</p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=3Zysp2fduiw"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 7 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="700">
+                    <a href="https://www.youtube.com/watch?v=7ZEsllZVq9c" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/7ZEsllZVq9c/hqdefault.jpg"
+                            alt="How to Register Your Intellectual Property"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                How to
+                                Register Your Intellectual Property</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Learn the
+                                step-by-step
+                                process of registering your intellectual property to secure your rights and protect your
+                                innovations.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=7ZEsllZVq9c"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 8 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="800">
+                    <a href="https://www.youtube.com/watch?v=VICkBYy9lZs" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/VICkBYy9lZs/hqdefault.jpg"
+                            alt="Leveraging Intellectual Property for Business Growth"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Leveraging
+                                Intellectual Property for Business Growth</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Discover
+                                how
+                                businesses
+                                can utilize their intellectual property assets to drive innovation, attract investment,
+                                and
+                                gain a
+                                competitive edge in the market.</p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=VICkBYy9lZs"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 9 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="900">
+                    <a href="https://www.youtube.com/watch?v=P7S_3NJdfMc" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/P7S_3NJdfMc/hqdefault.jpg"
+                            alt="Enforcement of Intellectual Property Rights"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Enforcement
+                                of Intellectual Property Rights</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Understand
+                                the
+                                legal
+                                frameworks and measures used to enforce intellectual property rights and protect
+                                creators
+                                from
+                                infringement.</p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=P7S_3NJdfMc"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 10 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="1000">
+                    <a href="https://www.youtube.com/watch?v=ahR8vdhIbXw" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/ahR8vdhIbXw/hqdefault.jpg" alt="Video Title Here"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Video Title
+                                Here</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Brief
+                                description or
+                                summary of the video goes here. Replace this text with relevant details.</p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=ahR8vdhIbXw"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 11 -->
+                <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition hover:scale-[1.015] flex flex-col justify-between"
+                    data-aos="zoom-in" data-aos-delay="1100">
+                    <a href="https://www.youtube.com/watch?v=n1w9kIzzbfE" target="_blank" rel="noopener"
+                        class="block relative">
+                        <img src="https://i.ytimg.com/vi/n1w9kIzzbfE/hqdefault.jpg"
+                            alt="Understanding Intellectual Property Rights"
+                            class="w-full h-52 object-cover rounded-t-2xl group-hover:brightness-75 transition duration-300"
+                            loading="lazy" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-white/20 p-3 rounded-full backdrop-blur group-hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                Understanding Intellectual Property Rights</h3>
+                            <p class="text-sm text-gray-300 group-hover:text-gray-200 transition-colors mb-4">Learn how
+                                to
+                                safeguard
+                                your innovations through effective IP strategies.</p>
+                        </div>
+                        <div class="mt-auto pt-2">
+                            <a href="https://www.youtube.com/watch?v=n1w9kIzzbfE"
+                                class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+                                target="_blank">Watch →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer
+        class="bg-gradient-to-br from-gray-950 to-gray-900 text-gray-300 py-16 mt-20 border-t border-gray-800 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
+
+            <!-- Company Info -->
+            <div data-aos="fade-up">
+                <h4 class="text-xl font-bold text-indigo-400 mb-4">Avanya Legal Solutions & Research</h4>
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Expert legal services, dispute resolution, and deep legal research tailored to individuals,
+                    startups,
+                    and global institutions.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="Aboutus.html" class="hover:text-indigo-400 transition-all duration-200">About Us</a>
+                    </li>
+                    <li><a href="services.html" class="hover:text-indigo-400 transition-all duration-200">Our
+                            Services</a></li>
+                    <li><a href="Contact.html" class="hover:text-indigo-400 transition-all duration-200">Contact</a>
+                    </li>
+                    <li><a href="PrivacyPolicy.html" class="hover:text-indigo-400 transition-all duration-200">Privacy
+                            Policy</a></li>
+                    <li><a href="Terms&Condition.html" class="hover:text-indigo-400 transition-all duration-200">Terms &
+                            Conditions</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact & Socials -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="text-lg font-semibold text-white mb-4">Get in Touch</h4>
+                <p class="text-sm mb-2 text-gray-400">Email:
+                    <a href="mailto:avanyalegalsolutions@gmail.com" class="text-indigo-400 hover:underline">
+                        avanyalegalsolutions@gmail.com
+                    </a>
+                </p>
+                <p class="text-sm text-gray-400">Phone:
+                    <a href="tel:+9779841460588" class="text-indigo-400 hover:underline">
+                        +977-9841460588
+                    </a>
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex items-center gap-6 mt-6">
+                    <!-- Facebook -->
+                    <a href="#"
+                        class="text-gray-400 hover:text-indigo-500 transition-transform transform hover:scale-125"
+                        aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5v-2c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.5.7-1.5 1.4v1.8H17l-.5 3h-2.5v7A10 10 0 0 0 22 12z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#"
+                        class="text-gray-400 hover:text-indigo-500 transition-transform transform hover:scale-125"
+                        aria-label="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5C4.98 4.9 3.9 6 2.5 6S0 4.9 0 3.5 1.1 1 2.5 1 4.98 2.1 4.98 3.5zM.5 8.98h4V24h-4V8.98zM8.48 8.98h3.85v2.06h.06c.54-1.02 1.84-2.1 3.79-2.1 4.05 0 4.8 2.66 4.8 6.12V24h-4v-6.87c0-1.64-.03-3.74-2.28-3.74-2.3 0-2.65 1.8-2.65 3.62V24h-4V8.98z" />
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#"
+                        class="text-gray-400 hover:text-indigo-500 transition-transform transform hover:scale-125"
+                        aria-label="Twitter">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 4.56c-.89.39-1.85.65-2.85.77A4.92 4.92 0 0 0 23.34 3c-.95.56-2 .97-3.13 1.2a4.92 4.92 0 0 0-8.39 4.48A13.97 13.97 0 0 1 1.67 3.15a4.93 4.93 0 0 0 1.52 6.57 4.9 4.9 0 0 1-2.23-.62v.06a4.93 4.93 0 0 0 3.95 4.83 4.94 4.94 0 0 1-2.22.08 4.94 4.94 0 0 0 4.6 3.42A9.87 9.87 0 0 1 0 19.54a13.94 13.94 0 0 0 7.55 2.21c9.05 0 14-7.5 14-14V7c.97-.7 1.8-1.56 2.45-2.54z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="text-center text-sm text-gray-600 mt-16 border-t border-gray-800 pt-6">
+            &copy; 2025 Avanya Legal Solutions & Research. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- AOS & Mobile Toggle Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+        const overlay = document.getElementById("overlay");
+
+        function toggleMenu() {
+            const isOpen = toggle.classList.toggle("open");
+            menu.classList.toggle("hidden", !isOpen);
+            overlay.classList.toggle("hidden", !isOpen);
+            menu.style.maxHeight = isOpen ? menu.scrollHeight + "px" : "0";
+        }
+
+        toggle.addEventListener("click", toggleMenu);
+        overlay.addEventListener("click", toggleMenu);
+        document.querySelectorAll("#mobile-menu a").forEach(link => link.addEventListener("click", toggleMenu));
+
+        // Initialize particlesJS for both sections
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.2, width: 1 },
+                move: { enable: true, speed: 1 }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    repulse: { distance: 100 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+
+        particlesJS("particles-js-blog-hero", {
+            particles: {
+                number: { value: 150, density: { enable: true, value_area: 600 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 2.5, random: true },
+                line_linked: { enable: false },
+                move: {
+                    enable: true,
+                    speed: 0.3,  // Slower movement
+                    random: true,
+                    out_mode: "out"
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: false },
+                    onclick: { enable: false },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+</body>
+
+</html>
