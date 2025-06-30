@@ -7,8 +7,6 @@
     <title>About Us | Avanya Legal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
     <style>
         html {
             scroll-behavior: smooth;
@@ -148,10 +146,9 @@
 
     <!-- Hero -->
     <section
-        class="min-h-screen flex items-center justify-center text-center px-4 bg-gradient-to-r from-indigo-800 to-purple-900 pt-32">
-        <!-- Particles Container Inside Hero -->
-        <div id="particles-js" class="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        </div>
+    class="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden text-white bg-cover bg-center"
+    style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./Assets/bg.jpg'); background-position: center top;">
+        
         <div class="max-w-4xl" data-aos="fade-up">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Who We Are:</h1>
             <p class="text-gray-300 text-lg md:text-xl mb-6">
@@ -348,30 +345,3 @@
 </body>
 
 </html>
-<script>
-    particlesJS("particles-js", {
-        particles: {
-            number: { value: 150, density: { enable: true, value_area: 600 } },
-            color: { value: "#ffffff" },
-            shape: { type: "circle" },
-            opacity: { value: 0.5, random: true },
-            size: { value: 2.5, random: true },
-            line_linked: { enable: false },
-            move: {
-                enable: true,
-                speed: 0.3,  // Slower movement
-                random: true,
-                out_mode: "out"
-            }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: { enable: false },
-                onclick: { enable: false },
-                resize: true
-            }
-        },
-        retina_detect: true
-    });
-</script>
